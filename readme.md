@@ -3,7 +3,7 @@
 1. アプリケーションidを取得する  
 https://e.developer.yahoo.co.jp/dashboard/
 1. カレントディレクトリに `setting.py` を作成して、アプリケーションIDを設定する  
-```python:
+```python
 APPID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 ```
 ## 使い方
@@ -19,7 +19,7 @@ APPID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 **`all_reviews.csv`**
 |ヘッダカラム名|内容|
-|:-|:-|
+|:---|:---|
 |Description|レビューの本文|
 |ReviewTitle|レビューのタイトル文（例：購入しました！）|
 |Rate|レビュー評価点 : 1.00（悪い）から5.00（良い）|
@@ -36,7 +36,6 @@ APPID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 |cat2_title_short|レベル2カテゴリ名|
 |cat3_title_short|レベル3カテゴリ名|
 |cat3_title_long|親カテゴリを含むカテゴリ名|
-|||
 
 ## コツ、注意
 - APIの利用制限  
