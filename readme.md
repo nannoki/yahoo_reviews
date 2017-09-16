@@ -18,6 +18,7 @@ APPID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 -> `all_reviews.csv` に、レビューデータが出力される。
 
 **`all_reviews.csv`**
+
 |ヘッダカラム名|内容|
 |:---|:---|
 |Description|レビューの本文|
