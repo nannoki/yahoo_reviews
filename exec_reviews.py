@@ -84,8 +84,13 @@ def get_reviews(cat_id):
         else:
             print('エラーが返されました : [cat id] {} [reason] {}-{}'.format(cat_id, result.status_code, result.reason))
             # todo: どうも検索結果が１件もない場合もエラーになるかもしれない。その場合は、returnも組み合わせるように修正する。
-            exit(True)
-            # return False
+            # 400 bad request
+            if result.status_code == 400:
+                print('ステータスコード400(badrequestは中止せず読み飛ばします')
+                break
+            else:
+                exit(True)
+                # return False
 
         avl = int(rs['totalResultsAvailable'])
         pos = int(rs['firstResultPosition'])
