@@ -40,12 +40,16 @@ APPID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 ## コツ、注意
 - APIの利用制限  
-１日のリクエスト回数が上限を超えた時にステータスコード403でエラーになります。AM0:00でリセットされるので、それまで待ちましょう。
-https://developer.yahoo.co.jp/appendix/rate.html
+    - １日のリクエスト回数が上限を超えた時にステータスコード403でエラーになります。AM0:00でリセットされるので、それまで待ちましょう。  
+    [利用制限について](https://developer.yahoo.co.jp/appendix/rate.html)  
+    [エラーについて](https://developer.yahoo.co.jp/appendix/errors.html)
+    - 利用回数はアプリケーションID単位でカウントされます。
 - 中断、分割実行
     - エラー、手動中断等理由を問わず、処理が中断されても、その中断したカテゴリIDから再開することが出来ます。
     (カレントディレクトリに `中断.txt` というファイルが作成されています。)
     - `中断.txt`を作成し、１行目に `all_categories.csv` のカテゴリの行番号を指定すると、その次の行から実行出来ます。
+    - 異なるアプリケーションIDで複数実行も出来ると思います。（試したことはない）  
+      ディレクトリをアプリケーションIDごとにディレクトリを作って、 `all_categories.csv` を分割すると、並行で実行できると思います。
 
 <!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
 <a href="https://developer.yahoo.co.jp/about">
